@@ -170,6 +170,7 @@ input:focus{
         flex-direction: column;
         width: 500px;
         padding: 2rem;
+        overflow-y: hidden;
         
       }
       .img-card{
