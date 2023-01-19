@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: content-box;
+ 
+  
+}
+
+/* funcion loader */
 .loader, .input-name {
-    background-color: white;
+    
     width: 100%;
     height: 100%;
     position: fixed;
@@ -12,6 +23,8 @@
     align-items: center;
     z-index: 999;
   }
+
+  /* componente inputname */
  
   .input-card{
  
@@ -34,7 +47,7 @@
   }
   .container-input-name{
     position: relative;
-    margin-top: 20rem;
+    margin-top: 25rem;
   }
   .container-input-btn{
     
@@ -67,19 +80,85 @@
   }
   .container-input-btn >button:hover{
     color: white;
+    transform: scale(100rem);
+    background-color: #2c2fa5; /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  
   }
 
 input:focus{
     outline: none;
 }
 
+.subtitle-card{
+  margin-bottom: 1rem;
+}
+/* componente pokedex */
 
+.container-Pokedex{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  font-family: 'Secular One', sans-serif;
+}
+.pokedex{
+  margin: 2rem;
+  line-height: 2rem;
+}
 
+.name{
+  color: red;
+}
+
+.title-pokedex{
+  font-family: 'Secular One', sans-serif;
+  font-weight: 900;
+  margin-bottom: 4rem;
+}
+
+.subtitle-pokedex{
+  margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.btn-back{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  color: black;
+  font-weight: 900;
+  position: absolute;
+  right: 1rem;
+  top: 85vh;
+  background-color: red;
+  box-shadow: 0px 10px 10px 0px gray;
+
+}
+
+.btn-back:hover{
+  color: white;
+  transform: scale(100rem);
+  background-color: #2c2fa5; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+/* 
 
 
   /* #################### Medias Query ##################### */
  
   @media (min-width: 900px) {
+    /* media input name */
     .input-card{
  
         display: flex;
@@ -102,7 +181,7 @@ input:focus{
       }
       .container-input-name{
         position: relative;
-        margin-top: 18rem;
+        margin-top: 25rem;
       }
       .container-input-btn >button{
         position: absolute;
@@ -116,6 +195,38 @@ input:focus{
       .container-input-btn > input{
         font-size: 30px;
       }
+
+
+      /* query pokedex */
+
+      .container-Pokedex{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+    
+      }
+     
+      .pokedex{
+        margin: 7rem;
+        margin-left: 20rem;
+        
+      }
+
+      .subtitle-pokedex{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+      }
+
+     
+       
+
+     
+        
 
   }
 
