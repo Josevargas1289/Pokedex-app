@@ -1,9 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-
-
-
 const Pokedex = () => {
     const Username = useSelector((state) => state.Username)
     return (
