@@ -26,7 +26,7 @@ function App() {
         isLoading ? (
           <div className='loader'>
             <img src={pokeball} alt="" />
-            <h1>Cargando Pokedex...</h1>
+            <h1 className='animate__animated animate__bounce animate__heartBeat'>Cargando Pokedex...</h1>
           </div>
 
         ) : (

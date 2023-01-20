@@ -20,8 +20,8 @@ const Inputname = () => {
     return (
         <div className='input-name'>
             <div className='input-card'>
-                <h1>Hello Trainer!</h1>
-                <img className='img-card' src={pikashucard} alt="" />
+                <h1 className='animate__animated animate__bounce animate__bounceIn'>Hello Trainer!</h1>
+                <img className='img-card animate__animated animate__bounce animate__backInLeft' src={pikashucard} alt="" />
                 <div className='container-input-name'>
                     <h4 className='subtitle-card'>Give me your name to start</h4>
                     <div className='container-input-btn'>
