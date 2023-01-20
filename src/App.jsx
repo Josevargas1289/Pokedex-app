@@ -15,6 +15,7 @@ import ProtectedRoutes from './components/ProtectedRoutes'
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
+  
   const load =()=>{
     setTimeout(() => setIsLoading(false), 1000);
     
@@ -34,7 +35,7 @@ function App() {
           <Routes>
             <Route path='/'element={<Inputname />} />
             <Route element={<ProtectedRoutes/>}>
-            <Route path='/pokedex' element={<Pokedex />} />
+            <Route path='/pokedex' element={<Pokedex/>} />
             <Route path='/pokedex/:id' element={<PokedexId />} />
 
             </Route>

@@ -26,7 +26,7 @@ const Inputname = () => {
                     <h4 className='subtitle-card'>Give me your name to start</h4>
                     <div className='container-input-btn'>
                         <input type="text" value={inputValue} onChange={e => setInputvalue(e.target.value)} />
-                        <button onClick={() => ClickButton()}><i class='bx bxs-paper-plane bx-md'></i></button>
+                        <button onClick={() => ClickButton()}><i className='bx bxs-paper-plane bx-md'></i></button>
                     </div>
                 </div>
             </div>

@@ -1,108 +1,117 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   box-sizing: content-box;
- 
-  
+
+
+
 }
 
 /* funcion loader */
-.loader, .input-name {
-    
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
+.loader,
+.input-name {
 
-  /* componente inputname */
- 
-  .input-card{
- 
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: 100%;
-    padding: 1rem;
-    margin-top: 2rem;
-    overflow-y: scroll;
-   
-    
-  }
-  .input-card> h1{
-    font-family: 'Secular One', sans-serif;
-
-  }
-  .img-card{
-    position: absolute;
-    width: 50%;
-    right: 3rem;
-    top: 8rem;
-    
-  }
-  .container-input-name{
-    position: relative;
-    margin-top: 25rem;
-  }
-  .container-input-btn{
-    
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-  }
-
-  .container-input-btn > input{
-    border: .5px solid black;
-    width: 100%;
-    height: 78px;
-    border-radius: 1rem;
-    box-shadow: 0px 2px 5px 2px gray;
-    font-size: 20px;
-    text-align: center;
-    
-  }
-
-  .container-input-btn >button{
-    position: absolute;
-    right: -15px;
-    border-radius: 50%;
-    border: none;
-    padding: 1.6rem;
-    background-color: red;
-    outline: none;
-  }
-  .container-input-btn >button:hover{
-    color: white;
-    transform: scale(100rem);
-    background-color: #2c2fa5; /* Color de fondo al pasar el cursor */
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-  
-  }
-
-input:focus{
-    outline: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
-.subtitle-card{
+
+/* componente inputname */
+
+.input-card {
+
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  overflow-y: scroll;
+
+
+}
+
+.input-card>h1 {
+  font-family: 'Secular One', sans-serif;
+
+}
+
+.img-card {
+  position: absolute;
+  width: 50%;
+  right: 3rem;
+  top: 8rem;
+
+}
+
+.container-input-name {
+  position: relative;
+  margin-top: 25rem;
+}
+
+.container-input-btn {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.container-input-btn>input {
+  border: .5px solid black;
+  width: 100%;
+  height: 78px;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 5px 2px gray;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.container-input-btn>button {
+  position: absolute;
+  right: -15px;
+  border-radius: 50%;
+  border: none;
+  padding: 1.6rem;
+  background-color: red;
+  outline: none;
+}
+
+.container-input-btn>button:hover {
+  color: white;
+  transform: scale(100rem);
+  background-color: #2c2fa5;
+  /* Color de fondo al pasar el cursor */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+input:focus {
+  outline: none;
+}
+
+.subtitle-card {
   margin-bottom: 1rem;
 }
+
 /* componente pokedex */
 
-.container-Pokedex{
+.container-Pokedex {
+ 
   position: relative;
   display: flex;
   flex-direction: column;
@@ -112,28 +121,29 @@ input:focus{
   height: 100%;
   font-family: 'Secular One', sans-serif;
 }
-.pokedex{
+
+.pokedex {
   margin: 2rem;
   line-height: 2rem;
 }
 
-.name{
+.name {
   color: red;
 }
 
-.title-pokedex{
+.title-pokedex {
   font-family: 'Secular One', sans-serif;
   font-weight: 900;
   margin-bottom: 4rem;
 }
 
-.subtitle-pokedex{
+.subtitle-pokedex {
   margin-top: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
 
-.btn-back{
+.btn-back {
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -153,101 +163,211 @@ input:focus{
 
 }
 
-.btn-back:hover{
+.btn-back:hover {
   color: white;
   transform: scale(100rem);
-  background-color: #2c2fa5; /* Color de fondo al pasar el cursor */
-	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-	transform: translateY(-7px);
+  background-color: #2c2fa5;
+  /* Color de fondo al pasar el cursor */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-7px);
 }
-/* 
+
+/* componente card pokemon */
 
 
-  /* #################### Medias Query ##################### */
+.container-card-pokemon {
+  
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 15px;
+  width: 250px;
+  height: 320px;
+  padding: .5rem;
+  margin: 1rem;
+  cursor: pointer;
+  
+
+}
+
+.card-pokemon {
+  
+  background-color: white;
+  width: 238px;
+  height: 210px;
+  border-radius: 0px 0px 15px 15px;
+  padding: .5rem;
+  margin-top: 6rem;
+  box-shadow: inset 0 0 0 7px rgb(241, 234, 234);
+  
+
+}
+
+.card-pokemon-inside {
+  
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
  
-  @media (min-width: 900px) {
-    /* media input name */
-    .input-card{
- 
-        display: flex;
-        flex-direction: column;
-        width: 450px;
-        overflow-y: hidden;
-        
-      }
-      .img-card{
-        position: absolute;
-        width: 200px;
-        right: 39%;
-        top: 2rem;
-        
-      }
-      .subtitle-card{
-        font-size: 20px;
-        font-family: 'Secular One', sans-serif;
-
-      }
-      .container-input-name{
-        position: relative;
-        margin-top: 18rem;
-    
-        padding: 1rem;
-      }
-      .container-input-btn >button{
-        position: absolute;
-        right: 0px;
-        border-radius: 50%;
-        border: none;
-        padding: 1.4rem;
-        background-color: red;
-    
-      }
-      .container-input-btn > input{
-        font-size: 30px;
-        border: none;
-      }
+}
 
 
-      /* query pokedex */
 
-      .container-Pokedex{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        height: 100%;
-        font-size: 25px;
-    
-      }
-     
-      .pokedex{
-        margin: 7rem;
-        margin-left: 20rem;
-        
-      }
+.container-img-pokemon{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  top: 0; 
 
-      .subtitle-pokedex{
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-      }
-      .btn-back{
-        
-        position: fixed;
-        right: 3rem;
-        top: 28rem;
-       
-      }
+}
 
-     
-       
+.img-pokemon-card {
+  top: 0;
+  padding-top: .5rem;
+  width: 130px;
+  height: 130px;
+  max-width: 130px;
+}
 
-     
-        
+.title-car-pokemon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: .5px solid rgba(128, 128, 128, 0.427);
+  padding-top: 1rem;
+
+
+}
+.pokemon-card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 10px;
+  line-height: 15px;
+  
+}
+/* .grid{
+  display: grid;
+  width: 900px;
+  grid-auto-rows: 20rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 3rem;
+} */
+
+
+/* #################### Medias Query ##################### */
+
+@media (min-width: 900px) {
+
+  /* media input name */
+  .input-card {
+
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    overflow-y: hidden;
 
   }
 
+  .img-card {
+    position: absolute;
+    width: 200px;
+    right: 39%;
+    top: 2rem;
+
+  }
+
+  .subtitle-card {
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+
+  }
+
+  .container-input-name {
+    position: relative;
+    margin-top: 18rem;
+
+    padding: 1rem;
+  }
+
+  .container-input-btn>button {
+    position: absolute;
+    right: 0px;
+    border-radius: 50%;
+    border: none;
+    padding: 1.4rem;
+    background-color: red;
+
+  }
+
+  .container-input-btn>input {
+    font-size: 30px;
+    border: none;
+  }
+
+
+
+  /* query pokedex */
+
+  .container-Pokedex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+
+  }
+
+  .pokedex {
+    margin: 7rem;
+    margin-left: 14rem;
+
+  }
+
+  .subtitle-pokedex {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+  }
+
+  .btn-back {
+
+    position: fixed;
+    right: 3rem;
+    top: 28rem;
+
+  }
+  /* query pokemon card */
+
+  .grid{
+    display: grid;
+    width: 900px;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 3rem;
+  }
   
 
- 
+
+
+
+
+
+
+}
