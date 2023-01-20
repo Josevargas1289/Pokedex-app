@@ -8,6 +8,7 @@ import PokedexId from './components/PokedexId'
 
 import pikashu from './assets/img/pikawalk.gif'
 import pokeball from './assets/img/pokemon-imagen-animada-0082.gif'
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 
 
@@ -32,8 +33,11 @@ function App() {
         ) : (
           <Routes>
             <Route path='/'element={<Inputname />} />
+            <Route element={<ProtectedRoutes/>}>
             <Route path='/pokedex' element={<Pokedex />} />
             <Route path='/pokedex/:id' element={<PokedexId />} />
+
+            </Route>
           </Routes>
 
         )
