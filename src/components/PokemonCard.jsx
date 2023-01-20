@@ -71,26 +71,51 @@ const PokemonCard = ({ url }) => {
             style={{ background: changeColorCardPokemon() }}
             onClick={() => navigate(`/pokedex/${pokemon.id}`)}
         >
-                <div className='container-img-pokemon'>
+            <div className='container-img-pokemon'>
 
-                    <img className='img-pokemon-card' src={pokemon.sprites?.other?.dream_world?.front_default
-                    } alt="" />
+                <img className='img-pokemon-card' src={pokemon.sprites?.other?.dream_world?.front_default
+                } alt="" />
+            </div>
+
+            <div className='card-pokemon'>
+                <b className='title-car-pokemon'
+                    style={{ color: changeColorCardPokemon() }}>
+                    {upperCaseName}
+                </b>
+                <div className='card-pokemon-inside'>
+                    <div className='pokemon-card-info'>
+                        <p> {typeOne}/{typeTwo}</p>
+                        <b>Type:</b>
+                    </div>
                 </div>
+                <div className='data-card-pokemon1'>
+                    <div>
+                        <b>HP</b>
+                        <p style={{ color: changeColorCardPokemon() }}>{pokemon?.stats?.[0]?.base_stat}</p>
+                    </div>
 
-                <div className='card-pokemon'>
-                    <b className='title-car-pokemon'
-                        style={{ color: changeColorCardPokemon() }}>
-                        {upperCaseName}
-                    </b>
-                    <div className='card-pokemon-inside'>
-                        <div className='pokemon-card-info'>
-                            <p> {typeOne}/{typeTwo}</p>
-                            <b>Type:</b>
-                        </div>
+                    <div>
+                        <b>ATAQUE</b>
+                        <p style={{ color: changeColorCardPokemon() }}>{pokemon?.stats?.[1]?.base_stat}</p>
                     </div>
 
                 </div>
-          
+                <div className='data-card-pokemon1'>
+
+                <div>
+                        <b>DEFENZA</b>
+                        <p style={{ color: changeColorCardPokemon() }}>{pokemon?.stats?.[2]?.base_stat}</p>
+                    </div>
+
+                    <div>
+                        <b>VELOCIDAD</b>
+                        <p style={{ color: changeColorCardPokemon() }}>{pokemon?.stats?.[5]?.base_stat}</p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
     );
