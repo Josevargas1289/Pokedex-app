@@ -169,16 +169,15 @@ input:focus{
  
         display: flex;
         flex-direction: column;
-        width: 500px;
-        padding: 2rem;
+        width: 450px;
         overflow-y: hidden;
         
       }
       .img-card{
         position: absolute;
-        width: 280px;
-        right: 35%;
-        top: 4rem;
+        width: 230px;
+        right: 39%;
+        top: 2rem;
         
       }
       .subtitle-card{
@@ -188,11 +187,13 @@ input:focus{
       }
       .container-input-name{
         position: relative;
-        margin-top: 25rem;
+        margin-top: 23rem;
+    
+        padding: 1rem;
       }
       .container-input-btn >button{
         position: absolute;
-        right: -18px;
+        right: 0px;
         border-radius: 50%;
         border: none;
         padding: 1.4rem;
@@ -201,6 +202,7 @@ input:focus{
       }
       .container-input-btn > input{
         font-size: 30px;
+        border: none;
       }
 
 
