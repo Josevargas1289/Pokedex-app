@@ -5,9 +5,35 @@
   padding: 0;
   box-sizing: border-box;
   box-sizing: content-box;
+}
 
+.nav{
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(90deg, rgba(246,45,0,1) 9%, rgba(223,10,10,1) 100%);
+  border-bottom: 1.5rem solid black;
+  z-index: 1000;
+}
+.nav-input{
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  height: 95px;
+  background-color: #dd1a1a;
+  border-bottom: 1.5rem solid black;
+  z-index: 1000;
 
-
+}
+.nav-img{
+  width: 50%;
+  margin: .5rem;
+  
 }
 
 /* funcion loader */
@@ -36,7 +62,7 @@
   width: 70%;
   height: 100%;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 8rem;
   overflow-y: scroll;
 
 
@@ -50,14 +76,14 @@
 .img-card {
   position: absolute;
   width: 50%;
-  right: 3rem;
-  top: 8rem;
+  right: 2rem;
+  top: 10rem;
 
 }
 
 .container-input-name {
   position: relative;
-  margin-top: 25rem;
+  margin-top: 20rem;
 }
 
 .container-input-btn {
@@ -134,7 +160,8 @@ input:focus {
 .title-pokedex {
   font-family: 'Secular One', sans-serif;
   font-weight: 900;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .subtitle-pokedex {
@@ -243,8 +270,7 @@ input:focus {
   justify-content: center;
   width: 100%;
   text-align: center;
-  margin-top: 1rem;
-   
+  margin-top: 1rem; 
   padding-top: 1rem;
 
 
@@ -289,33 +315,42 @@ input:focus {
 @media (min-width: 900px) {
 
   /* media input name */
+ 
+  .nav-img{
+    width: 20%;
+    margin: .5rem;
+    
+  }
+  
   .input-card {
 
     display: flex;
     flex-direction: column;
     width: 450px;
     overflow-y: hidden;
+  
 
   }
+  
 
   .img-card {
     position: absolute;
-    width: 200px;
+    width: 180px;
+    height: 300px;
     right: 39%;
-    top: 2rem;
+    top: 9  rem;
 
   }
 
   .subtitle-card {
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Secular One', sans-serif;
 
   }
 
   .container-input-name {
     position: relative;
-    margin-top: 18rem;
-
+    margin-top: 14rem;
     padding: 1rem;
   }
 
@@ -346,12 +381,14 @@ input:focus {
     width: 100%;
     height: 100%;
     font-size: 25px;
+    margin-top: 3rem;
 
   }
 
   .pokedex {
-    margin: 7rem;
-    margin-left: 14rem;
+    margin: 4rem;
+    margin-left: 15rem;
+    
 
   }
 
@@ -365,7 +402,7 @@ input:focus {
 
     position: fixed;
     right: 3rem;
-    top: 28rem;
+    top: 25rem;
 
   }
   /* query pokemon card */

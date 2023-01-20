@@ -5,38 +5,43 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import PokemonCard from './PokemonCard';
+import pokedexImg from '../assets/img/image11.png'
 
 const Pokedex = () => {
 
     const Username = useSelector((state) => state.Username)
     const navigate = useNavigate();
-    const [pokemons, setPokemons]= useState([]);
+    const [pokemons, setPokemons] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
-        .then((res)=>setPokemons(res.data.results))
-        
-        
+            .then((res) => setPokemons(res.data.results))
 
-    },[]);
-   console.log(pokemons);
+
+
+    }, []);
+    console.log(pokemons);
 
     const backPage = () => {
         navigate(-1)
     }
     return (
+
         <div className='container-Pokedex'>
+            <div className='nav'>
+                <img className='nav-img' src={pokedexImg} alt="" />
+            </div>
             <div className='pokedex'>
                 <h1 className='title-pokedex'>Pokedex</h1>
                 <h3 className='subtitle-pokedex'>Welcome <b className='name'>{Username}</b>, here you can find your favorite pokemon</h3>
                 <br />
                 <ul className='grid'>
                     {
-                        pokemons.map(pokemon=>(
-                                <PokemonCard 
+                        pokemons.map(pokemon => (
+                            <PokemonCard
                                 key={pokemon.url}
                                 url={pokemon.url}
-                                />
+                            />
                         ))
                     }
                 </ul>

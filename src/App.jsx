@@ -24,15 +24,22 @@ function App() {
   
   return (
     <HashRouter>
+    
+     
       {
         isLoading ? (
           <div className='loader'>
             <img src={pokeball} alt="" />
             <h1 className='animate__animated animate__bounce animate__heartBeat'>Cargando Pokedex...</h1>
+          
           </div>
+          
 
         ) : (
+         
+          
           <Routes>
+       
             <Route path='/'element={<Inputname />} />
             <Route element={<ProtectedRoutes/>}>
             <Route path='/pokedex' element={<Pokedex/>} />
@@ -43,6 +50,7 @@ function App() {
 
         )
       }
+    
     </HashRouter>
   )
 }
