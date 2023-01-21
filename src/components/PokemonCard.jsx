@@ -76,7 +76,7 @@ const PokemonCard = ({ url }) => {
             <div className='container-img-pokemon'>
 
                 <img className='img-pokemon-card' src={pokemon.sprites?.other?.dream_world?.front_default
-                } alt="" />
+                } alt="No image in pokedex" />
             </div>
 
             <div className='card-pokemon'>

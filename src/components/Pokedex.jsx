@@ -87,20 +87,9 @@ const Pokedex = () => {
                         }
 
                     </select>
+                    
                 </div>
-                <ul className='grid'>
-                    {
-                        pokemonPaginated?.map(pokemon => (
-                            <PokemonCard
-                                key={pokemon.url ? pokemon.url : pokemon.pokemon.url}
-                                url={pokemon.url ? pokemon.url : pokemon.pokemon.url}
-                            />
-                        ))
-                    }
-                </ul>
-                <button onClick={backPage} className='btn-back'><i className='bx bx-left-arrow-circle bx-sm'></i></button>
-            </div>
-            <div className='pagination'>
+                <div className='pagination'>
                 <button onClick={() => setPage(page - 1)} className='pagination-btn'
                     disabled={page === 1}
                     
@@ -122,6 +111,19 @@ const Pokedex = () => {
                 </button>
 
             </div>
+                <ul className='grid'>
+                    {
+                        pokemonPaginated?.map(pokemon => (
+                            <PokemonCard
+                                key={pokemon.url ? pokemon.url : pokemon.pokemon.url}
+                                url={pokemon.url ? pokemon.url : pokemon.pokemon.url}
+                            />
+                        ))
+                    }
+                </ul>
+                <button onClick={backPage} className='btn-back'><i className='bx bx-left-arrow-circle bx-sm'></i></button>
+            </div>
+            
         </div>
     );
 };

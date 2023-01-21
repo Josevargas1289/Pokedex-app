@@ -247,6 +247,9 @@ select{
   width: 100%;
   height: 50px;
   gap: .5rem;
+
+ 
+  
 }
 .pagination-btn{
   background-color: #dd1a1a;
@@ -489,7 +492,7 @@ select{
   }
 
   .pokedex {
-    margin: 4rem;
+    margin: 5rem;
     
     
 
@@ -573,7 +576,10 @@ select{
     align-items: center;
     width: 100%;
     height: 50px;
-    margin: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+  
     gap: .5rem;
   }
   .pagination-btn{
