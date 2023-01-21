@@ -57,7 +57,7 @@ const Pokedex = () => {
 
     const numbers = [];
     
-      for (let i = page - 3; i <= page + 3; i++) {
+      for (let i = page - 3; i <= page + 2; i++) {
         if (i >= page && i <= totalPages) {
           numbers.push(i);
         }
@@ -97,7 +97,7 @@ const Pokedex = () => {
                     
                 </div>
                 <div className='pagination'>
-                    {`PAGE ${page}`}
+                    {/* {`PAGE ${page}`} */}
                 <button onClick={() => setPage(page - 1)} className='pagination-btn'
                     disabled={page === 1}
                     
@@ -117,7 +117,7 @@ const Pokedex = () => {
                     disabled={page === totalPages}
                 ><i className='bx bxs-chevrons-right bx-md'></i>
                 </button>
-                {`${totalPages} TOTAL`}
+                {/* {`${totalPages} TOTAL`} */}
 
             </div>
                 <ul className='grid'>
