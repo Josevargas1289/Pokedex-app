@@ -63,16 +63,6 @@ const Pokedex = () => {
         }
       }
 
-{numbers.map((number) => (
-            <button
-              key={number}
-              className="pagination_numbers"
-              onClick={() => setPage(number)}>
-              {number}
-            </button>
-          ))}
-
-   
 
     return (
 
@@ -107,6 +97,7 @@ const Pokedex = () => {
                     
                 </div>
                 <div className='pagination'>
+                    {`PAGE ${page}`}
                 <button onClick={() => setPage(page - 1)} className='pagination-btn'
                     disabled={page === 1}
                     
@@ -122,19 +113,11 @@ const Pokedex = () => {
             </button>
           ))}
               
-                {/* {pages.map(number =>
-                    <button
-                   
-                    className='number-pages'
-                        onClick={() => setPage(number)}>{number}
-
-                    </button>)} */}
-
-              
                 <button onClick={() => setPage(page +1)} className='pagination-btn'
                     disabled={page === totalPages}
                 ><i className='bx bxs-chevrons-right bx-md'></i>
                 </button>
+                {`${totalPages} TOTAL`}
 
             </div>
                 <ul className='grid'>
