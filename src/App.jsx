@@ -24,8 +24,7 @@ function App() {
   
   return (
     <HashRouter>
-    
-     
+      
       {
         isLoading ? (
           <div className='loader'>
