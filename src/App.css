@@ -282,6 +282,9 @@ select{
 .number-pages:focus{
   background-color: #dd1a1a;
 }
+.number-pages:active{
+  background-color: #dd1a1a;
+}
 
 /* componente card pokemon */
 
