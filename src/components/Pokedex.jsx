@@ -55,6 +55,23 @@ const Pokedex = () => {
             .then((res) => setPokemons(res.data.pokemon))
     }
 
+    const numbers = [];
+    
+      for (let i = page - 3; i <= page + 3; i++) {
+        if (i >= page && i <= totalPages) {
+          numbers.push(i);
+        }
+      }
+
+{numbers.map((number) => (
+            <button
+              key={number}
+              className="pagination_numbers"
+              onClick={() => setPage(number)}>
+              {number}
+            </button>
+          ))}
+
    
 
     return (
@@ -95,16 +112,25 @@ const Pokedex = () => {
                     
                 ><i className='bx bxs-chevrons-left bx-md'></i>
                 </button>
-                {/* {page} */}
-                {pages.map(number =>
+
+                {numbers.map((number) => (
+            <button
+              key={number}
+              className="number-pages"
+              onClick={() => setPage(number)}>
+              {number}
+            </button>
+          ))}
+              
+                {/* {pages.map(number =>
                     <button
                    
                     className='number-pages'
                         onClick={() => setPage(number)}>{number}
 
-                    </button>)}
+                    </button>)} */}
 
-                {/* {totalPages} */}
+              
                 <button onClick={() => setPage(page +1)} className='pagination-btn'
                     disabled={page === totalPages}
                 ><i className='bx bxs-chevrons-right bx-md'></i>
