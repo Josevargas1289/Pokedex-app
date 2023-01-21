@@ -26,6 +26,7 @@ const Pokedex = () => {
 
 
     }, []);
+    
     const [page, setPage] = useState(1);
     const pokemonsPerpage = 9;
     const lastIndex = page * pokemonsPerpage;
@@ -34,6 +35,7 @@ const Pokedex = () => {
     const totalPages = Math.ceil(pokemons.length / pokemonsPerpage)
 
     const pages = []
+    
     for(let i = 1; i<= totalPages; i++){
         pages.push(i)
     }
