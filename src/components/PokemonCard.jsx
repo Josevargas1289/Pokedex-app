@@ -15,7 +15,7 @@ const PokemonCard = ({ url }) => {
             .then((res) => setPokemon(res.data))
 
     }, [])
-    console.log(pokemon);
+    // console.log(pokemon);
 
     const typeOne = pokemon?.types?.[1]?.type.name
     const typeTwo = pokemon?.types?.[0]?.type.name
@@ -54,6 +54,8 @@ const PokemonCard = ({ url }) => {
             return '#030706'
         } else if (typeTwo === 'fairy' || typeOne === '') {
             return '#981844'
+        }else{
+            return 'gray'
         }
 
     }

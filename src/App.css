@@ -199,6 +199,36 @@ input:focus {
   transform: translateY(-7px);
 }
 
+.container-search{
+  display: flex;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+}
+input{
+  width: 38%;
+  height: 35px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 1px 3px 0px gray;
+  text-align: center;
+}
+select{
+  margin-left: 15px;
+  width: 37%;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 1px 3px 0px gray;
+
+}
+.btn-search{
+  width: 20%;
+  background-color: #dd1a1a;
+  border: none;
+  box-shadow: 0px 1px 3px 0px gray;
+}
+
 /* componente card pokemon */
 
 
@@ -309,6 +339,17 @@ input:focus {
   font-weight:500;
 }
 
+/* componente PokemonId */
+
+.card-pokemonId{
+  display: flex;
+  flex-direction: column;
+  padding: 9rem;
+}
+.img-pokemonId{
+  width: 300px;
+}
+
 
 /* #################### Medias Query ##################### */
 
@@ -408,6 +449,36 @@ input:focus {
     right: 3rem;
     top: 25rem;
 
+  }
+
+  .container-search{
+    display: flex;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
+  input{
+    width: 38%;
+    height: 35px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 1px 3px 0px gray;
+    text-align: center;
+  }
+  select{
+    margin-left: 15px;
+    width: 37%;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 1px 3px 0px gray;
+  
+  }
+  .btn-search{
+    width: 20%;
+    background-color: #dd1a1a;
+    border: none;
+    box-shadow: 0px 1px 3px 0px gray;
   }
   /* query pokemon card */
 
