@@ -82,7 +82,7 @@ const Pokedex = () => {
                         ))
                     }
                 </ul>
-                <button onClick={backPage} className='btn-back'><i className='bx bx-left-arrow-circle bx-lg'></i></button>
+                <button onClick={backPage} className='btn-back'><i className='bx bx-left-arrow-circle bx-sm'></i></button>
             </div>
         </div>
     );
