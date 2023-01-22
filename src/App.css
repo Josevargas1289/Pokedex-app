@@ -178,6 +178,7 @@
     flex-direction: column;
     width: 430px;
     margin-top: 26rem;
+  
    
 }
 
@@ -200,6 +201,7 @@
   font-size: 20px;
   text-align: center;
   background-color: var(--inpun-color);
+  border: 2px solid black;
 
 }
 
