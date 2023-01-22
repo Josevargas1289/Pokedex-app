@@ -1,10 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
+.ligth {
+  --body-color-Ligth: hsl(0, 0%, 99%);
+  --button-color-Ligth: hsl(0, 89%, 55%);
+  --button-color-hover-Ligth: hsl(249, 65%, 62%);
+  --card-color-Ligth: hsl(240, 33%, 99%);
+  --title-color-Ligth: hsl(0, 0%, 0%);
+  --text-color-Ligth: hsl(0, 0%, 0%);
+  --nav-color-Ligth:  hsl(0, 89%, 55%);
+  --nav-border-color: hsl(0, 0%, 0%);
+  --inpun-color:  hsl(0, 0%, 99%);
+  --box-shadow-color:hsl(180, 2%, 26%);
+  --text-card-info: rgba(128, 128, 128, 0.856);
+}
+
+.dark{
+  --body-color-Ligth: hsl(180, 2%, 35%);
+  --button-color-Ligth: hsl(221, 69%, 69%);
+  --button-color-hover-Ligth: hsl(0, 84%, 51%);
+  --card-color-Ligth: hsl(180, 4%, 34%);
+  --title-color-Ligth: hsl(0, 0%, 100%);
+  --text-color-Ligth: hsl(0, 100%, 100%);
+  --nav-color-Ligth:hsl(221, 69%, 69%);
+  --nav-border-color: hsl(0, 0%, 0%);
+  --inpun-color:  hsl(0, 0%, 99%);
+  --box-shadow-color:hsl(0, 0%, 4%);
+  --text-card-info: rgba(220, 217, 217, 0.856); 
+}
+
+/* btn-dark */
+
+.switch {
+  background-color: var(--button-color-Ligth);
+  border-radius: 1000px;
+  border: none;
+  position: fixed;
+  right: 2rem;
+  top: 13rem;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.3rem 0.5rem;
+  gap: 1rem;
+  z-index: 3000;
+}
+.switch:hover {
+  transform: scale(1.1);
+}
+.switch::after {
+  content: "";
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  background-color: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+  
+}
+.switch.active {
+  background-color: var(--button-color-Ligth);
+  color: black;
+}
+.switch.active::after {
+  left: unset;
+  right: 0;
+}
+.switch span {
+  display: flex;
+  background-color: none;
+  color: #fff;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   box-sizing: content-box;
+  
+}
+.container-app{
+  background-color: var(--body-color-Ligth);
 }
 
 .nav{
@@ -14,8 +97,8 @@
   justify-content: space-between;
   width: 100%;
   height: 70px;
-  background-color: #dd1a1a;
-  border-bottom: 1.5rem solid black;
+  background-color: var(--nav-color-Ligth);
+  border-bottom: 1.5rem solid var(--nav-border-color);
   z-index: 1000;
 }
 .nav-input{
@@ -25,8 +108,8 @@
   justify-content: space-between;
   width: 100%;
   height: 95px;
-  background-color: #dd1a1a;
-  border-bottom: 1.5rem solid black;
+  background-color: var(--button-color-Ligth);
+  border-bottom: 1.5rem solid var(--nav-border-color);
   z-index: 1000;
 
 }
@@ -50,6 +133,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  background-color: var(--body-color-Ligth);
 }
 
 
@@ -97,13 +181,14 @@
 }
 
 .container-input-btn>input {
-  border: .5px solid black;
+  border: .5px solid var(--inpun-color);
   width: 100%;
   height: 78px;
   border-radius: 1rem;
-  box-shadow: 0px 2px 5px 2px gray;
+  box-shadow: 0px 2px 5px 2px var(--box-shadow-color);
   font-size: 20px;
   text-align: center;
+  background-color: var(--inpun-color);
 
 }
 
@@ -112,17 +197,17 @@
   right: -15px;
   border-radius: 50%;
   border: none;
-  padding: 1.6rem;
-  background-color: red;
+  padding: 1.9rem;
+  background-color: var(--button-color-Ligth);
   outline: none;
 }
 
 .container-input-btn>button:hover {
   color: white;
   transform: scale(100rem);
-  background-color: #2c2fa5;
+  background-color: var(--button-color-hover-Ligth);
   /* Color de fondo al pasar el cursor */
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+ 
 
 }
 
@@ -155,7 +240,7 @@ input:focus {
 }
 
 .name {
-  color: red;
+  color: var(--button-color-Ligth);
 }
 
 .title-pokedex {
@@ -166,7 +251,9 @@ input:focus {
 }
 
 .subtitle-pokedex {
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  color: var(--title-color-Ligth);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
@@ -181,22 +268,21 @@ input:focus {
   border-radius: 50%;
   margin-bottom: 1rem;
   border: none;
-  color: black;
+  color: var(--text-color-Ligth);
   font-weight: 900;
   position: fixed;
   right: 1rem;
   top: 34rem;
-  background-color: red;
-  box-shadow: 0px 10px 10px 0px gray;
+  background-color: var(--text-color-Ligth);
+  box-shadow: 0px 10px 10px 0px var(--body-color-Ligth);
 
 }
 
 .btn-back:hover {
-  color: white;
+  color: var(--body-color-Ligth);
   transform: scale(100rem);
-  background-color: #2c2fa5;
+  background-color: var(--button-color-hover-Ligth);
   /* Color de fondo al pasar el cursor */
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-7px);
 }
 
@@ -210,31 +296,31 @@ input:focus {
 input{
   width: 38%;
   height: 35px;
-  background-color: white;
-  box-shadow: 0px 1px 3px 0px gray;
+  background-color: var(--inpun-color);
+  box-shadow: 0px 1px 3px 0px var(--box-shadow-color);
   text-align: center;
 }
 select{
   margin-left: 5px;
   width: 37%;
-  background-color: white;
-  box-shadow: 0px 1px 3px 0px gray;
-  border: 1px solid black;
+  background-color: var(--body-color-Ligth);
+  box-shadow: 0px 1px 3px 0px var(--box-shadow-color);
+  border: 1px solid var(--text-color-Ligth);
   border-radius: 3px;
 
 }
 .btn-search{
   width: 20%;
-  background-color: #dd1a1a;
-  box-shadow: 0px 1px 3px 0px gray;
+  background-color: var(--text-color-Ligth);
+  box-shadow: 0px 1px 3px 0px var(--box-shadow-color);
 }
 
 .btn-search:hover {
   color: white;
   transform: scale(100rem);
-  background-color: #2c2fa5;
+  background-color: var(--button-color-hover-Ligth);
   /* Color de fondo al pasar el cursor */
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+ 
   
 }
 
@@ -252,7 +338,7 @@ select{
   
 }
 .pagination-btn{
-  background-color: #dd1a1a;
+  background-color: var(--body-color-Ligth);
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -267,9 +353,9 @@ select{
 .pagination-btn:hover{
   color: white;
   transform: scale(100rem);
-  background-color: #2c2fa5;
+  background-color: var(--button-color-hover-Ligth);
   /* Color de fondo al pasar el cursor */
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+ 
 
 }
 .number-pages{
@@ -277,16 +363,16 @@ select{
   height: 30px;
   border: none;
   font-size: 20px;
-  background-color: white;
+  background-color: var(--body-color-Ligth);
   padding: .3rem;
 }
 
 
 .number-pages:focus{
-  background-color: #dd1a1a;
+  background-color: var(--button-color-Ligth);
 }
 .number-pages:active{
-  background-color: #dd1a1a;
+  background-color: var(--button-color-Ligth);
 }
 
 /* componente card pokemon */
@@ -318,13 +404,13 @@ select{
 
 .card-pokemon {
   
-  background-color: white;
+  background-color: var(--body-color-Ligth);
   width: 210px;
   height: 230px;
   border-radius: 0px 0px 15px 15px;
   padding: .5rem;
   margin-top: 4.3rem;
-  box-shadow: inset 0 0 0 7px rgb(241, 234, 234);
+  box-shadow: inset 0 0 0 7px rgb(183, 180, 180);
   
 
 }
@@ -395,7 +481,7 @@ select{
   margin-bottom: 1rem;
 }
 .data-card-pokemon1 b{
-  color: rgba(128, 128, 128, 0.856);
+  color: var(--text-card-info);
   font-weight: 100;
 }
 
@@ -425,6 +511,7 @@ select{
   .nav-img{
     width: 20%;
     margin: .5rem;
+
     
   }
   
@@ -434,6 +521,7 @@ select{
     flex-direction: column;
     width: 450px;
     overflow-y: hidden;
+    background-color: var(--body-color-Ligth)
   
 
   }
@@ -444,7 +532,7 @@ select{
     width: 180px;
     height: 300px;
     right: 39%;
-    top: 9  rem;
+    top: 9rem;
 
   }
 
@@ -465,8 +553,8 @@ select{
     right: 0px;
     border-radius: 50%;
     border: none;
-    padding: 1.4rem;
-    background-color: red;
+    padding: 1.9rem;
+    background-color: var(--button-color-Ligth);
 
   }
 
@@ -502,10 +590,11 @@ select{
   }
 
   .subtitle-pokedex {
-    font-size: 20px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
     padding-left: 1rem;
+    font-family: 'Secular One', sans-serif;
   }
 
   .btn-back {
@@ -522,17 +611,16 @@ select{
     position: fixed;
     right: 2rem;
     top: 29rem;
-    background-color: red;
-    box-shadow: 0px 10px 10px 0px gray;
+    background-color: var(--button-color-Ligth);
+    box-shadow: 2px 2px 10px 0px var(--box-shadow-color)
   
   }
   
   .btn-back:hover {
     color: white;
     transform: scale(100rem);
-    background-color: #2c2fa5;
+    background-color: var(--button-color-hover-Ligth);
     /* Color de fondo al pasar el cursor */
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-7px);
   }
  
@@ -546,25 +634,25 @@ select{
   }
   input{
     width: 38%;
-    height: 35px;
-    background-color: white;
+    height: 50px;
+    background-color: var(--inpun-color);
     border: none;
-    box-shadow: 0px 1px 3px 0px gray;
+    box-shadow: 0px 1px 3px 0px var(--box-shadow-color);
     text-align: center;
   }
   select{
     margin-left: 15px;
     width: 37%;
-    background-color: white;
+    background-color: var(--inpun-color);
     border: none;
-    box-shadow: 0px 1px 3px 0px gray;
+    box-shadow: 0px 1px 3px 0px var(--box-shadow-color)
   
   }
   .btn-search{
     width: 20%;
-    background-color: #dd1a1a;
+    background-color: var(--button-color-Ligth);
     border: none;
-    box-shadow: 0px 1px 3px 0px gray;
+    box-shadow: 0px 1px 3px 0px var(--box-shadow-color)
   }
 
 
@@ -583,7 +671,7 @@ select{
     gap: .5rem;
   }
   .pagination-btn{
-    background-color: #dd1a1a;
+    background-color: var(--button-color-Ligth);
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -596,11 +684,11 @@ select{
 
   }
   .pagination-btn:hover{
-    color: white;
+    color: var(--body-color-Ligth);
     transform: scale(100rem);
-    background-color: #2c2fa5;
+    background-color: var(--button-color-hover-Ligth);
     /* Color de fondo al pasar el cursor */
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+   
   
   }
   .number-pages{
@@ -608,13 +696,13 @@ select{
     height: 30px;
     border: none;
     font-size: 20px;
-    background-color: white;
+    background-color: var(--body-color-Ligth);
     padding: .3rem;
   }
 
 
   .number-pages:focus{
-    background-color: #dd1a1a;
+    background-color: var(--button-color-Ligth);
   }
 
   
@@ -629,11 +717,5 @@ select{
     gap: 3rem;
   }
   
-
-
-
-
-
-
 
 }

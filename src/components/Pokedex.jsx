@@ -40,7 +40,7 @@ const Pokedex = () => {
         pages.push(i)
     }
 
-    console.log(pokemoType);
+    // console.log(pokemoType);
 
     const backPage = () => {
         navigate(-1)
@@ -71,7 +71,7 @@ const Pokedex = () => {
                 <img className='nav-img' src={pokedexImg} alt="" />
             </div>
             <div className='pokedex'>
-                <h1 className='title-pokedex'>Pokedex</h1>
+              
                 <h3 className='subtitle-pokedex'>Welcome <b className='name'>{Username}</b>, here you can find your favorite pokemon</h3>
                 <br />
                 <div className='container-search'>

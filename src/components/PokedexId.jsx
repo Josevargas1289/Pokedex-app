@@ -16,7 +16,7 @@ const PokedexId = () => {
             .then((res) => setPokemonId(res.data))
 
     }, []);
-    console.log(pokemonId);
+    // console.log(pokemonId);
 
     return (
 
@@ -29,6 +29,8 @@ const PokedexId = () => {
                 <h1>{pokemonId.name}</h1>
                 <img className='img-pokemonId' src={pokemonId.sprites?.other?.dream_world?.front_default} alt="" />
             </div>
+
+            
         </div>
     );
 };

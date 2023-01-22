@@ -15,16 +15,47 @@ import ProtectedRoutes from './components/ProtectedRoutes'
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
+  const [switchMode, setSwitchMode] = useState(false);
+  const [darkmode,setDarkmode] = useState(false)
   
   const load =()=>{
     setTimeout(() => setIsLoading(false), 1000);
     
   }
   load();
-  
+
+  const switchOn = () => {
+    setSwitchMode(!switchMode);
+    setDarkmode(!darkmode);
+  };
+  let classDark = "";
+  if (switchMode == true) {
+    classDark = "active";
+  }
+
   return (
-    <HashRouter>
+    <div className= 
+    {
+      `container-app ${darkmode ? 'dark': 'ligth'}`
+    }
+    
+    >
       
+    <HashRouter>
+      <header style={{display: isLoading ? 'none' : 'block'}}>
+      <button
+              onClick={switchOn}
+              className={`switch ${classDark}`}
+              id="swith">
+              <span>
+                <i className="bx bx-sun bx-sm"></i>
+              </span>
+              <span>
+                <i className="bx bx-moon bx-sm"></i>
+              </span>
+            </button>
+      </header>
+    
       {
         isLoading ? (
           <div className='loader'>
@@ -51,6 +82,7 @@ function App() {
       }
     
     </HashRouter>
+    </div>
   )
 }
 
