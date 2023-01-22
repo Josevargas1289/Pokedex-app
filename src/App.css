@@ -35,8 +35,8 @@
   border-radius: 1000px;
   border: none;
   position: fixed;
-  right: 2rem;
-  top: 13rem;
+  right: 5rem;
+  top: 10rem;
   cursor: pointer;
   display: flex;
   outline: none;
@@ -120,8 +120,7 @@
 }
 
 /* funcion loader */
-.loader,
-.input-name {
+.loader {
 
   width: 100%;
   height: 100%;
@@ -140,13 +139,15 @@
 /* componente inputname */
 
 .input-card {
-
+  
   display: flex;
   flex-direction: column;
-  width: 70%;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
   height: 100%;
   padding: 1rem;
-  margin-top: 8rem;
+  margin-top: 13rem;
   overflow-y: scroll;
 
 
@@ -161,7 +162,7 @@
   position: absolute;
   width: 50%;
   right: 2rem;
-  top: 10rem;
+  top: 15rem;
 
 }
 
@@ -172,7 +173,7 @@
 
 .container-input-btn {
 
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -181,7 +182,7 @@
 }
 
 .container-input-btn>input {
-  border: .5px solid var(--inpun-color);
+  border: .5px solid var(--nav-border-color);
   width: 100%;
   height: 78px;
   border-radius: 1rem;
@@ -194,7 +195,7 @@
 
 .container-input-btn>button {
   position: absolute;
-  right: -15px;
+  right: 6rem;
   border-radius: 50%;
   border: none;
   padding: 1.9rem;
@@ -273,7 +274,7 @@ input:focus {
   position: fixed;
   right: 1rem;
   top: 34rem;
-  background-color: var(--text-color-Ligth);
+  background-color: var(--button-color-Ligth);
   box-shadow: 0px 10px 10px 0px var(--body-color-Ligth);
 
 }
@@ -311,7 +312,7 @@ select{
 }
 .btn-search{
   width: 20%;
-  background-color: var(--text-color-Ligth);
+  background-color: var(--button-color-Ligth);
   box-shadow: 0px 1px 3px 0px var(--box-shadow-color);
 }
 
@@ -516,36 +517,46 @@ select{
   }
   
   .input-card {
-
+    
     display: flex;
-    flex-direction: column;
-    width: 450px;
-    overflow-y: hidden;
-    background-color: var(--body-color-Ligth)
-  
-
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: 13rem;
+    
+  }
+  .input-card >h1 {
+  padding-right: 19rem;
+  padding-top: 1rem;
+  font-size: 40px;
+    
   }
   
 
   .img-card {
     position: absolute;
-    width: 180px;
-    height: 300px;
+    width: 220px;
+    height: 350px;
     right: 39%;
-    top: 9rem;
+    top: 12rem;
 
   }
 
   .subtitle-card {
     font-size: 15px;
     font-family: 'Secular One', sans-serif;
+    
 
   }
 
   .container-input-name {
     position: relative;
-    margin-top: 14rem;
-    padding: 1rem;
+    margin-top: 4rem;
+    padding: 10rem;
+    width: 36%;
   }
 
   .container-input-btn>button {
@@ -555,6 +566,7 @@ select{
     border: none;
     padding: 1.9rem;
     background-color: var(--button-color-Ligth);
+    right: 19rem;
 
   }
 
@@ -715,6 +727,24 @@ select{
     grid-auto-rows: 20rem;
     grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     gap: 3rem;
+  }
+
+  .switch {
+    background-color: var(--button-color-Ligth);
+    border-radius: 1000px;
+    border: none;
+    position: fixed;
+    right: 2rem;
+    top: 13rem;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.3rem 0.5rem;
+    gap: 1rem;
+    z-index: 3000;
   }
   
 
