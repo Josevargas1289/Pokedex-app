@@ -157,7 +157,7 @@
 
 .input-card>h1 {
  position: absolute;
- top: 15rem;
+ top: 13rem;
  left: 2rem;
  color: var(--text-color-Ligth);
 
@@ -168,7 +168,7 @@
   position: absolute;
   width: 50%;
   right: 2.1rem;
-  top: 13rem;
+  top: 11rem;
 
 }
 
