@@ -84,6 +84,7 @@
   padding: 0;
   box-sizing: border-box;
   box-sizing: content-box;
+ 
   
 }
 .container-app{
@@ -147,7 +148,7 @@
   width: 100%;
   height: 100vh;
   padding: 1rem;
-  overflow-x: none;
+  overflow-x: hidden;
   
 }
 
@@ -199,7 +200,7 @@
 
 .container-input-btn>button {
   position: absolute;
-  right: .5rem;
+  right: .2rem;
   border-radius: 50%;
   border: none;
   padding: 1.9rem;
