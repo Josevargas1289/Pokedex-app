@@ -15,10 +15,10 @@
 }
 
 .dark{
-  --body-color-Ligth: hsl(180, 2%, 35%);
+  --body-color-Ligth: #1d1b1b;
   --button-color-Ligth: hsl(221, 69%, 69%);
   --button-color-hover-Ligth: hsl(0, 84%, 51%);
-  --card-color-Ligth: hsl(180, 4%, 34%);
+  --card-color-Ligth: hsl(0, 0%, 95%);
   --title-color-Ligth: hsl(0, 0%, 100%);
   --text-color-Ligth: hsl(0, 100%, 100%);
   --nav-color-Ligth:hsl(221, 69%, 69%);
@@ -312,7 +312,7 @@ input{
 select{
   margin-left: 5px;
   width: 37%;
-  background-color: var(--body-color-Ligth);
+  background-color: var(--inpun-color);
   box-shadow: 0px 1px 3px 0px var(--box-shadow-color);
   border: 1px solid var(--text-color-Ligth);
   border-radius: 3px;
@@ -374,6 +374,7 @@ select{
   font-size: 20px;
   background-color: var(--body-color-Ligth);
   padding: .3rem;
+  color: var(--text-color-Ligth);
 }
 
 
@@ -414,7 +415,7 @@ select{
 
 .card-pokemon {
   
-  background-color: var(--body-color-Ligth);
+  background-color: var(--card-color-Ligth);
   width: 236px;
   height: 232px;
   border-radius: 0px 0px 15px 15px;
