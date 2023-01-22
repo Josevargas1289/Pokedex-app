@@ -35,7 +35,7 @@
   border-radius: 1000px;
   border: none;
   position: fixed;
-  right: 3rem;
+  right: 4.5rem;
   top: 10rem;
   cursor: pointer;
   display: flex;
@@ -151,8 +151,9 @@
 }
 
 .input-card>h1 {
-  font-family: 'Secular One', sans-serif;
-  margin-top: 5rem;
+ position: absolute;
+ top: 15rem;
+ left: 2rem;
 
 }
 
@@ -160,7 +161,7 @@
   position: absolute;
   width: 50%;
   right: 2.1rem;
-  top: 15rem;
+  top: 13rem;
 
 }
 
@@ -168,7 +169,7 @@
   
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 430px;
     margin-top: 22rem;
    
 }
@@ -197,7 +198,7 @@
 
 .container-input-btn>button {
   position: absolute;
-  right: 4rem;
+  right: 1rem;
   border-radius: 50%;
   border: none;
   padding: 1.9rem;
