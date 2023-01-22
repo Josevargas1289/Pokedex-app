@@ -159,6 +159,8 @@
  position: absolute;
  top: 15rem;
  left: 2rem;
+ color: var(--text-color-Ligth);
+
 
 }
 
@@ -226,6 +228,8 @@ input:focus {
 
 .subtitle-card {
   margin-bottom: 1rem;
+  color: var(--text-color-Ligth);
+
 }
 
 /* componente pokedex */
@@ -542,6 +546,7 @@ select{
   position: absolute;
   top: 30%;
   left: 35%;
+  color: var(--text-color-Ligth);
  
   }
   
@@ -557,6 +562,8 @@ select{
   .subtitle-card {
     font-size: 15px;
     font-family: 'Secular One', sans-serif;
+    color: var(--text-color-Ligth);
+
     
 
   }
