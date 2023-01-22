@@ -120,7 +120,7 @@
 }
 
 /* funcion loader */
-.loader {
+.loader  {
 
   width: 100%;
   height: 100%;
@@ -152,6 +152,7 @@
 
 .input-card>h1 {
   font-family: 'Secular One', sans-serif;
+  margin-top: 5rem;
 
 }
 
@@ -168,7 +169,6 @@
     display: flex;
     flex-direction: column;
     width: 350px;
-    margin-bottom: 1rem;
     margin-top: 22rem;
    
 }
@@ -539,15 +539,15 @@ select{
 
   .img-card {
     position: absolute;
-    width: 220px;
+    width: 300px;
     height: 350px;
     right: 39%;
-    top: 15rem;
+    top: 20rem;
 
   }
 
   .subtitle-card {
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Secular One', sans-serif;
     
 
@@ -566,7 +566,7 @@ select{
     border: none;
     padding: 1.9rem;
     background-color: var(--button-color-Ligth);
-    right: 6rem;
+    right: 45rem;
 
   }
 
