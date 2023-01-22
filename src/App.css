@@ -52,8 +52,8 @@
 }
 .switch::after {
   content: "";
-  width: 33px;
-  height: 33px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   background-color: #F1F1F1;
   top: 0;
