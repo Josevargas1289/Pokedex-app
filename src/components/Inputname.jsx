@@ -20,9 +20,9 @@ const Inputname = () => {
 
     return (
         <div className='input-name'>
-            
-              <div className='nav-input'>
-              <img className='nav-img' src={pokedexImg} alt="" />
+
+            <div className='nav-input'>
+                <img className='nav-img' src={pokedexImg} alt="" />
 
             </div>
             <div className='input-card'>
