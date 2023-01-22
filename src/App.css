@@ -145,12 +145,8 @@
   justify-content: center;
   justify-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 1rem;
-  margin-top: 13rem;
-  overflow-y: scroll;
-
-
 }
 
 .input-card>h1 {
@@ -173,7 +169,7 @@
 
 .container-input-btn {
 
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -195,7 +191,7 @@
 
 .container-input-btn>button {
   position: absolute;
-  right: 6rem;
+  right: 4rem;
   border-radius: 50%;
   border: none;
   padding: 1.9rem;
@@ -523,14 +519,13 @@ select{
     justify-items: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    padding: 1rem;
-    margin-top: 13rem;
+    height: 100vh;
+   
     
   }
   .input-card >h1 {
   padding-right: 19rem;
-  padding-top: 1rem;
+  margin-top: 18rem;
   font-size: 40px;
     
   }
@@ -566,7 +561,7 @@ select{
     border: none;
     padding: 1.9rem;
     background-color: var(--button-color-Ligth);
-    right: 19rem;
+    right: 16rem;
 
   }
 
