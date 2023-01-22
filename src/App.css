@@ -280,7 +280,7 @@ input:focus {
   color: var(--text-color-Ligth);
   font-weight: 900;
   position: fixed;
-  right: 1rem;
+  right: 0;
   top: 34rem;
   background-color: var(--button-color-Ligth);
   box-shadow: 0px 10px 10px 0px var(--body-color-Ligth);
