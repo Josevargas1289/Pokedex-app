@@ -530,19 +530,22 @@ select{
     
   }
   .input-card >h1 {
-  margin-top: 12rem;
-  font-size: 40px;
-  padding-right: 18rem;
+  position: absolute;
+  top: 5rem;
+  left: 25rem;
+  font-size: 30px;
+ 
+
     
   }
   
 
   .img-card {
     position: absolute;
-    width: 300px;
-    height: 350px;
-    right: 39%;
-    top: 20rem;
+    width: 230px;
+    height: 270px;
+    right: 35%;
+    top: 10rem;
 
   }
 
@@ -554,9 +557,12 @@ select{
   }
 
   .container-input-name {
+  
    display: flex;
    flex-direction: column;
    width: 600px;
+   margin-top: 22rem;
+   margin-left: 7rem;
   }
 
   .container-input-btn>button {
@@ -566,7 +572,7 @@ select{
     border: none;
     padding: 1.9rem;
     background-color: var(--button-color-Ligth);
-    right: 45rem;
+    right: 22rem;
 
   }
 
