@@ -165,7 +165,7 @@ const PokedexId = () => {
         return (
             <Container color={color} width={width}>
                 <progress value={40} max={max} />
-                <span>{(value / max) * 150}%</span>
+                <span>{(value / max) * 200}%</span>
             </Container>
         );
     };
@@ -243,15 +243,15 @@ const PokedexId = () => {
                     <div>
                         <span className='span-stats'>HP:</span>
                         <span>{pokemonId?.stats?.[1]?.base_stat}
-                            <progress  value={pokemonId?.stats?.[1]?.base_stat} max="150" aria-colspan='jose'></progress>
-                        </span><span>150</span>
+                            <progress  value={pokemonId?.stats?.[1]?.base_stat} max="200" aria-colspan='jose'></progress>
+                        </span><span>200</span>
 
                     </div>
                     <div>
                         <span className='span-stats'>Attack:</span>
                         <span>{pokemonId?.stats?.[2]?.base_stat}
-                            <progress value={pokemonId?.stats?.[2]?.base_stat} max="150"></progress>
-                        </span><span>150</span>
+                            <progress value={pokemonId?.stats?.[2]?.base_stat} max="200"></progress>
+                        </span><span>200</span>
 
                     </div>
 
@@ -266,7 +266,7 @@ const PokedexId = () => {
                         <span className='span-stats'>Speed:</span>
                         <span>{pokemonId?.stats?.[5]?.base_stat}
                             <progress value={pokemonId?.stats?.[5]?.base_stat} max="150"></progress>
-                        </span><span>150</span>
+                        </span><span>200</span>
                     </div>
 
 
