@@ -288,16 +288,17 @@ input:focus {
   font-weight: 900;
   position: fixed;
   right: 0;
-  top: 34rem;
-  background-color: var(--button-color-Ligth);
-  box-shadow: 0px 10px 10px 0px var(--body-color-Ligth);
+  top: 0;
+  z-index: 3000;
+  background-color: transparent;
+  
 
 }
 
 .btn-back:hover {
   color: var(--body-color-Ligth);
   transform: scale(100rem);
-  background-color: var(--button-color-hover-Ligth);
+  
   /* Color de fondo al pasar el cursor */
   transform: translateY(-7px);
 }
@@ -820,18 +821,16 @@ progress[value] {
     color: black;
     font-weight: 900;
     position: fixed;
-    right: 2rem;
-    top: 29rem;
-    background-color: var(--button-color-Ligth);
-    box-shadow: 2px 2px 10px 0px var(--box-shadow-color)
+    right: 0;
+    top: 0;
+    z-index: 3000;
+    background-color: transparent;
   
   }
   
   .btn-back:hover {
     color: white;
     transform: scale(100rem);
-    background-color: var(--button-color-hover-Ligth);
-    /* Color de fondo al pasar el cursor */
     transform: translateY(-7px);
   }
  
