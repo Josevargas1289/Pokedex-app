@@ -518,7 +518,164 @@ select{
   width: 300px;
 }
 
-/*  */
+/* componente pekedexid */
+
+.container-pokemonId{
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1rem;
+}
+
+.card-pokemonId{
+  display: flex;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 13rem;
+  padding: 0%;
+ 
+  
+}
+
+.card-pokemon-id-img{
+  width: 100%;
+  height: 135px;
+  position: relative;
+  border-radius: 1rem 1rem 0 0;
+}
+.img-pokemonId{
+  width: 200px;
+  position: absolute;
+  top: -5rem;
+  left: 25%;
+  
+}
+
+.TitleName{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+.title-id{
+  margin-top: 2rem;
+}
+.pokemonId-name-card{
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.909);
+}
+
+.container-type{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 2rem;
+
+}
+.card-pokemonid-type, .card-pokemonid-Abilities, .progress-bar{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px 1px var(--box-shadow-color);
+  margin-bottom: 3rem;
+  background-color: var(--card-color-Ligth);
+  padding: 10px;
+
+  
+  
+}
+.container-type-one-two{
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  
+ 
+
+}
+.type1, .type2{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 90px;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  box-shadow: 1px 1px 4px 1px var(--box-shadow-color); 
+  background-color: var(--card-color-Ligth);
+}
+.progress-bar{
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+progress[value] {
+  width: 250px;
+  height: 20px;
+
+  /* Reinicializar estilos */
+
+  appearance: none;
+  -webkit-appearance: none;
+
+} 
+
+progress[value]::-webkit-progress-bar {
+  background-color: gold;
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 15px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: var(--nav-color-Ligth)
+}
+
+progress[value]::-webkit-progress-value {
+border-radius: 15px;
+}
+
+progress[value] {
+  width: 250px;
+  height: 20px;
+
+  /* Reinicializar estilos */
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Quitar borde en Firefox */
+
+  border: none;
+
+}
+
+.span-stats{
+  margin-left: 8px;
+}
+
+
 
 /* #################### Medias Query ##################### */
 

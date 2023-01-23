@@ -26,8 +26,9 @@ const PokemonCard = ({ url }) => {
 
         } else if (typeTwo === 'fighting' || typeOne === '') {
             return '#973f26'
+        }else if (typeTwo === 'flying' || typeOne === '') {
+            return '#48677b'
         }
-
         else if (typeTwo === 'poison' || typeOne === '') {
             return '#5b2d86'
         } else if (typeTwo === 'ground' || typeOne === '') {
