@@ -197,12 +197,12 @@ const PokedexId = () => {
                 </h1>
                 <div className='container-type'>
 
-                
+
 
                     <div className='card-pokemonid-type'>
-                    <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Type <span className='pokemonId-name-card'></span>
-                </h1>
-                        
+                        <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Type <span className='pokemonId-name-card'></span>
+                        </h1>
+
                         <div className='container-type-one-two'>
 
                             <div className='type1'
@@ -221,8 +221,8 @@ const PokedexId = () => {
                     </div>
 
                     <div className='card-pokemonid-Abilities'>
-                    <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Abilities <span className='pokemonId-name-card'></span>
-                </h1>
+                        <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Abilities <span className='pokemonId-name-card'></span>
+                        </h1>
                         <div className='container-type-one-two ' >
                             {
                                 pokemonId.abilities?.map((a) => (
@@ -238,12 +238,12 @@ const PokedexId = () => {
                 </div>
                 <div className='progress-bar'>
 
-                <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Stats <span className='pokemonId-name-card'></span>
-                </h1>
+                    <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Stats <span className='pokemonId-name-card'></span>
+                    </h1>
                     <div>
                         <span className='span-stats'>HP:</span>
                         <span>{pokemonId?.stats?.[1]?.base_stat}
-                            <progress  value={pokemonId?.stats?.[1]?.base_stat} max="200" aria-colspan='jose'></progress>
+                            <progress value={pokemonId?.stats?.[1]?.base_stat} max="200" aria-colspan='jose'></progress>
                         </span><span>200</span>
 
                     </div>
@@ -272,6 +272,17 @@ const PokedexId = () => {
 
 
 
+                </div>
+                <div className='movements'>
+                <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Moviments <span className='pokemonId-name-card'></span>
+                    </h1>
+                    {
+                        pokemonId.moves?.map((m)=>(
+                            <span className='span-moves' key={m.move.url}>
+                                {m.move.name}
+                            </span>
+                        ))
+                    }
                 </div>
 
             </div>

@@ -585,7 +585,9 @@ select{
   margin-top: 2rem;
 
 }
-.card-pokemonid-type, .card-pokemonid-Abilities, .progress-bar{
+.card-pokemonid-type, .card-pokemonid-Abilities, .progress-bar,
+.movements
+{
   display: flex;
   width: 80%;
   flex-direction: column;
@@ -681,6 +683,13 @@ progress[value] {
 
 .span-stats{
   margin-left: 8px;
+}
+
+.span-moves{
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(154, 153, 153, 0.801);
+
 }
 
 
