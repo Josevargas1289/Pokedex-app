@@ -223,10 +223,10 @@ const PokedexId = () => {
                     <div className='card-pokemonid-Abilities'>
                     <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Abilities <span className='pokemonId-name-card'></span>
                 </h1>
-                        <div className='container-type-one-two'>
+                        <div className='container-type-one-two ' >
                             {
                                 pokemonId.abilities?.map((a) => (
-                                    <div className='type1' key={a.ability.url}>
+                                    <div className='type1 type-hability' key={a.ability.url}>
                                         {a.ability.name}
                                     </div >
                                 ))
