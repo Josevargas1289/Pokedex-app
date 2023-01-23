@@ -688,7 +688,9 @@ progress[value] {
 .span-moves{
   font-size: 20px;
   padding: 10px;
-  border-bottom: 1px solid rgba(209, 209, 209, 0.702);
+  border-bottom: 1px solid rgba(230, 229, 229, 0.539);
+  width: 100%;
+  text-align: center;
 
 }
 
