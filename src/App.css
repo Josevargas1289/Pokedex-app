@@ -539,23 +539,24 @@ select{
   justify-items: center;
   align-content: center;
   align-items: center;
-  margin-top: 13rem;
+  margin-top: 10rem;
   padding: 0%;
  
   
 }
 
 .card-pokemon-id-img{
-  width: 100%;
-  height: 135px;
+  width: 300px;
+  height: 300px;
   position: relative;
-  border-radius: 50%
+  border-radius: 50%;
+  box-shadow: 1px 1px 50px 1px inset ;
 }
 .img-pokemonId{
   width: 200px;
   position: absolute;
-  top: -5rem;
-  left: 25%;
+  top: 2.5rem;
+  left: 20%;
   
 }
 
