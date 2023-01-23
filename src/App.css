@@ -31,12 +31,12 @@
 /* btn-dark */
 
 .switch {
-  background-color: var(--button-color-Ligth);
+  background-color: yellow;
   border-radius: 1000px;
   border: none;
   position: absolute;
-  right: 0rem;
-  top: 7rem;
+  right: 15px;
+  top: 1.3rem;
   cursor: pointer;
   display: flex;
   outline: none;
@@ -45,7 +45,7 @@
   text-align: center;
   padding: 0.3rem 0.5rem;
   gap: 1rem;
-  z-index: 1000;
+  z-index: 4000;
 }
 .switch:hover {
   transform: scale(1.1);
@@ -65,7 +65,7 @@
   
 }
 .switch.active {
-  background-color: var(--button-color-Ligth);
+  background-color: yellowgreen;
   color: black;
 }
 .switch.active::after {
@@ -287,7 +287,7 @@ input:focus {
   color: var(--text-color-Ligth);
   font-weight: 900;
   position: fixed;
-  right: 0;
+  right: 6rem;
   top: 0;
   z-index: 3000;
   background-color: transparent;
