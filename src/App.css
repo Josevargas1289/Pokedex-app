@@ -718,6 +718,9 @@ progress[value] {
 .container-movements{
   flex-direction: column;
 }
+.container-pokemonId{
+  overflow-x: hidden;
+}
 
 
 
