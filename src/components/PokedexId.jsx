@@ -194,7 +194,7 @@ const PokedexId = () => {
                     className='card-pokemon-id-img'
                     style={{ background: changeColorCardPokemon() }}
                 >
-                    <img className='img-pokemonId' src={pokemonId.sprites?.other?.dream_world?.front_default} alt="" />
+                    <img className='img-pokemonId animate__animated animate__bounce animate__fadeIn' src={pokemonId.sprites?.other?.dream_world?.front_default} alt="" />
                 </div>
                 <h1 className='title-id'
                     style={{ color: changeColorCardPokemon() }}

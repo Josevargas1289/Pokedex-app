@@ -28,6 +28,9 @@
   --text-card-info: rgba(220, 217, 217, 0.856); 
 }
 
+  
+
+
 /* btn-dark */
 
 .switch {
@@ -84,6 +87,7 @@
   padding: 0;
   box-sizing: border-box;
   box-sizing: content-box;
+  scroll-behavior:smooth;
  
   
 }
@@ -558,9 +562,11 @@ select{
 }
 .img-pokemonId{
   width: 200px;
+  height: 200px;
   position: absolute;
-  top: 2.5rem;
+  top: 15%;
   left: 20%;
+  
   
 }
 
@@ -572,7 +578,10 @@ select{
   padding-bottom: 1rem;
 }
 .title-id{
-  margin-top: 6rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+
 }
 .pokemonId-name-card{
   width: 100%;
