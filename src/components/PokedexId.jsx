@@ -236,6 +236,7 @@ const PokedexId = () => {
                     </div>
 
                 </div>
+
                 <div className='progress-bar'>
 
                     <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Stats <span className='pokemonId-name-card'></span>
@@ -269,23 +270,27 @@ const PokedexId = () => {
                         </span><span>200</span>
                     </div>
 
-
-
-
                 </div>
-                <div className='movements'>
-                <h1 className='TitleName'> <span className='pokemonId-name-card'></span> Moviments <span className='pokemonId-name-card'></span>
-                    </h1>
-                    {
-                        pokemonId.moves?.map((m)=>(
-                            <span className='span-moves' key={m.move.url}>
-                                {m.move.name}
-                            </span>
-                        ))
-                    }
-                </div>
+                
 
             </div>
+            <div className='container-movements'>
+            <h1 className='title-name-movements'
+            style={{ background: changeColorCardPokemon() }}
+            
+            >  Moviments  </h1>
+                    <div className='movements'>
+                        {
+                            pokemonId.moves?.map((m) => (
+                                <div className='container-span-movies'>
+                                    <div className='span-moves' key={m.move.url}>
+                                        {m.move.name}
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
         </div>
     );
 };

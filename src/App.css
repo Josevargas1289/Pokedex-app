@@ -522,8 +522,9 @@ select{
 /* componente pekedexid */
 
 .container-pokemonId{
-  /* background-color: aqua; */
+  
   display: flex;
+  flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -531,6 +532,8 @@ select{
   position: relative;
   margin: 1rem;
 }
+
+
 
 .card-pokemonId{
   display: flex;
@@ -598,9 +601,17 @@ select{
   margin-bottom: 3rem;
   background-color: var(--card-color-Ligth);
   padding: 10px;
+}
 
-  
-  
+.title-name-movements{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 1px 1px 4px 1px var(--box-shadow-color); */
+  background-color: var(--card-color-Ligth);
+  padding: 10px;
 }
 .container-type-one-two{
   display: flex;
@@ -630,9 +641,6 @@ select{
   color: black;
 }
 
-
-
-
 .progress-bar{
   gap: 2rem;
   padding-top: 2rem;
@@ -649,6 +657,11 @@ progress[value] {
   -webkit-appearance: none;
 
 } 
+.container-progress{
+  display: flex;
+  justify-content: center;
+
+}
 
 progress[value]::-webkit-progress-bar {
   background-color: gold;
@@ -681,6 +694,13 @@ progress[value] {
   border: none;
 
 }
+.container-movements{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin-left: 3rem;
+}
 
 .span-stats{
   margin-left: 8px;
@@ -694,6 +714,10 @@ progress[value] {
   text-align: center;
 
 }
+.container-movements{
+  flex-direction: column;
+}
+
 
 
 
@@ -821,8 +845,8 @@ progress[value] {
     color: black;
     font-weight: 900;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 9;
+    top: -.1rem;
     z-index: 3000;
     background-color: transparent;
   
@@ -927,14 +951,13 @@ progress[value] {
     gap: 3rem;
     margin-right: 4rem;
   }
-
   .switch {
-    background-color: var(--button-color-Ligth);
+    background-color: yellow;
     border-radius: 1000px;
     border: none;
     position: fixed;
-    right: 2rem;
-    top: 13rem;
+    right: 15px;
+    top: 1.2rem;
     cursor: pointer;
     display: flex;
     outline: none;
@@ -943,8 +966,95 @@ progress[value] {
     text-align: center;
     padding: 0.3rem 0.5rem;
     gap: 1rem;
-    z-index: 3000;
+    z-index: 4000;
   }
-  
+  .switch:hover {
+    transform: scale(1.1);
+  }
+  .switch::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+    
+  }
+  .switch.active {
+    background-color: yellowgreen;
+    color: black;
+  }
+  .switch.active::after {
+    left: unset;
+    right: 0;
+  }
+  .switch span {
+    display: flex;
+    background-color: none;
+    color:black;
+  }
 
+  /* ############# componente */
+  .container-pokemonId{
+    margin: 0rem 15rem;
+    
+
+  }
+ .card-pokemonid-type, .card-pokemonid-Abilities{
+  width: 50%;
+ }
+.container-type{
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.progress-bar{
+  width: 98%;
+   
+}
+.container-movements{
+  flex-direction: column;
+}
+
+.movements{
+  display: grid;
+  width: 100%;
+  grid-auto-rows: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+}
+
+.span-moves{
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  width: 50%;
+  text-align: center;
+
+}
+.title-name-movements{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 1px 1px 4px 1px var(--box-shadow-color); */
+  background-color: var(--card-color-Ligth);
+  padding: 10px;
+}
+.container-movements{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 98%;
+  margin-right: 4rem;
+  
+}
+  
 }
