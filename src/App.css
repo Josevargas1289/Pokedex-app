@@ -572,7 +572,7 @@ select{
   padding-bottom: 1rem;
 }
 .title-id{
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 .pokemonId-name-card{
   width: 100%;
@@ -1060,5 +1060,9 @@ progress[value] {
   margin-right: 4rem;
   
 }
+.container-pokemonId{
+  overflow-x: visible;
+}
+
   
 }
