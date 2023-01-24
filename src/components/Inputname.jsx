@@ -18,6 +18,8 @@ const Inputname = () => {
 
     }
 
+    
+
     return (
         <div className='input-name'>
 

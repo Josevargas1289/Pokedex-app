@@ -14,9 +14,11 @@ const Pokedex = () => {
     const [pokemons, setPokemons] = useState([]);
     const [inputSearch, setInputSearch] = useState('')
     const [pokemoType, setPokemonType] = useState([]);
+    
 
 
     useEffect(() => {
+       
         axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
             .then((res) => setPokemons(res.data.results))
 
@@ -53,7 +55,9 @@ const Pokedex = () => {
     const filterType = (e) => {
         axios.get(e.target.value)
             .then((res) => setPokemons(res.data.pokemon))
+           
     }
+   
 
     const numbers = [];
     
@@ -63,6 +67,10 @@ const Pokedex = () => {
         }
       }
 
+      function firstLetterUpCaseName(text) {
+        let name = text?.split(" ");
+        return name?.map((e) => e[0].toUpperCase() + e.slice(1)).join(" ");
+    }
 
     return (
 
@@ -72,22 +80,25 @@ const Pokedex = () => {
             </div>
             <div className='pokedex'>
               
-                <h3 className='subtitle-pokedex'>Welcome <b className='name'>{Username}</b>, here you can find your favorite pokemon</h3>
+                <h3 className='subtitle-pokedex'>Welcome <b className='name'>{firstLetterUpCaseName(Username)}</b>, here you can find your favorite pokemon</h3>
                 <br />
                 <div className='container-search'>
                     <input type="text"
-                        placeholder='search pokemon'
+                        placeholder='Search pokemon'
                         value={inputSearch}
                         onChange={(e) => setInputSearch(e.target.value)}
                     />
                     <button className='btn-search' onClick={search}>Search</button>
 
+                   
 
                     <select onChange={filterType} name="" id="">
+                       
+                            
                         {
                             pokemoType.map((type) => (
                                 <option value={type.url} key={type.url}>
-                                    {type.name}
+                                    {firstLetterUpCaseName(type.name)}
                                 </option>
 
                             ))

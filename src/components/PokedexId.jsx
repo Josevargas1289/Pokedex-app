@@ -2,13 +2,14 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import pokedexImg from '../assets/img/image11.png'
 
 
 
 const PokedexId = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const [pokemonId, setPokemonId] = useState({});
 
@@ -169,8 +170,15 @@ const PokedexId = () => {
             </Container>
         );
     };
+    const backPage = () => {
+        navigate(-1)
 
+    }
 
+    function firstLetterUpCaseName(text) {
+        let name = text?.split(" ");
+        return name?.map((e) => e[0].toUpperCase() + e.slice(1)).join(" ");
+    }
 
 
     const upperCaseName = firstLetterUpCaseName(pokemonId.name);
@@ -208,12 +216,12 @@ const PokedexId = () => {
                             <div className='type1'
                                 style={{ background: changeColorTypeOne(), display: typeOneOn() }}
                             >
-                                {typeOne}
+                                {firstLetterUpCaseName(typeOne)}
                             </div>
 
                             <div className='type2'
                                 style={{ background: changeColorTypeTwo(), display: typetwoOn() }} >
-                                {typeTwo}
+                                {firstLetterUpCaseName(typeTwo)}
                             </div>
                         </div>
 
@@ -227,7 +235,7 @@ const PokedexId = () => {
                             {
                                 pokemonId.abilities?.map((a) => (
                                     <div className='type1 type-hability' key={a.ability.url}>
-                                        {a.ability.name}
+                                        {firstLetterUpCaseName(a.ability.name)}
                                     </div >
                                 ))
 
@@ -284,13 +292,15 @@ const PokedexId = () => {
                             pokemonId.moves?.map((m) => (
                                 <div className='container-span-movies'>
                                     <div className='span-moves' key={m.move.url}>
-                                        {m.move.name}
+                                        {firstLetterUpCaseName(m.move.name)}
                                     </div>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
+        <button onClick={backPage} className='btn-back'><i className='bx bx-chevrons-left bx-lg'></i></button>
+
         </div>
     );
 };
