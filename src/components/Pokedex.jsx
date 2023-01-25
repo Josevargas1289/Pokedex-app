@@ -19,7 +19,7 @@ const Pokedex = () => {
 
     useEffect(() => {
        
-        axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
+        axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1200')
             .then((res) => setPokemons(res.data.results))
 
         axios.get('https://pokeapi.co/api/v2/type')
@@ -53,8 +53,14 @@ const Pokedex = () => {
         navigate(`/pokedex/${inputSearch.toLowerCase()}`)
     }
     const filterType = (e) => {
-        axios.get(e.target.value)
-            .then((res) => setPokemons(res.data.pokemon))
+        if(e.target.value === "all"){
+            axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1200')
+                .then((res) => setPokemons(res.data.results))
+        } else {
+
+            axios.get(e.target.value)
+                .then((res) => setPokemons(res.data.pokemon))
+        }
            
     }
    
@@ -94,10 +100,11 @@ const Pokedex = () => {
 
                     <select onChange={filterType} name="" id="">
                        
-                            
+                        <option value="all">All Pokemons</option>
                         {
                             pokemoType.map((type) => (
                                 <option value={type.url} key={type.url}>
+                                 
                                     {firstLetterUpCaseName(type.name)}
                                 </option>
 

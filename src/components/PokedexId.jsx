@@ -17,6 +17,7 @@ const PokedexId = () => {
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then((res) => setPokemonId(res.data))
+             window.scrollTo(0, 0)
 
 
     }, []);
@@ -290,8 +291,8 @@ const PokedexId = () => {
                     <div className='movements'>
                         {
                             pokemonId.moves?.map((m) => (
-                                <div className='container-span-movies'>
-                                    <div className='span-moves' key={m.move.url}>
+                                <div key={m.move.url} className='container-span-movies'>
+                                    <div className='span-moves' >
                                         {firstLetterUpCaseName(m.move.name)}
                                     </div>
                                 </div>
